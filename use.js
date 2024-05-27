@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Form submitted:", answers);
         alert("Form submitted! Check console for answers.");
     });
+
+    resetButton.addEventListener("click", function() {
+        form.reset();
+    });
 });
 
-export default arrOfData = [
-    {name: "q1"},
-    
-]
