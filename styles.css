@@ -59,3 +59,60 @@ button {
 button:hover {
     background: #0056b3;
 }
+
+.custom-checkbox {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: 10px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Right answer checkbox */
+.right-answer span {
+    background-color: #e0e0e0;
+}
+
+.right-answer input[type="checkbox"]:checked + span {
+    background-color: green;
+}
+
+.right-answer input[type="checkbox"]:checked + span::before {
+    content: "v";
+}
+
+/* Wrong answer checkbox */
+.wrong-answer span {
+    background-color: #e0e0e0;
+}
+
+.wrong-answer input[type="checkbox"]:checked + span {
+    background-color: red;
+}
+
+.wrong-answer input[type="checkbox"]:checked + span::before {
+    content: "x";
+}
